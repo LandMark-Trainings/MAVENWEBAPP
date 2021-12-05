@@ -16,6 +16,7 @@
 		<url>http://landmarktechnologies.com/</url>
 	</organization>
 	<!-- Testing -->
+	<!-- Try harder -->
 	<properties>
 		<jdk.version>1.8</jdk.version>
 		<spring.version>5.1.2.RELEASE</spring.version>

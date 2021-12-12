@@ -98,7 +98,7 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>Landmark Technologies Releases Nexus Repository</name>
-	      <url>http://192.168.56.1:8000/repository/maven_web_app_release/</url>
+	      <url>http://192.168.56.1:8000/repository/Ebay-Blackfriday/</url>
 	    </repository>
 	    
 	    <snapshotRepository>

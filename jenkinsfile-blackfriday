@@ -1,0 +1,22 @@
+node{
+    def mavenHome = tool name: 'maven 3.8.4'
+    stage('1-clone'){
+       git branch: 'dev', credentialsId: 'GIT_PAT', url: 'https://github.com/LandMark-Trainings/MAVENWEBAPP.git' 
+    }
+    stage('2-maven build'){
+        sh "$mavenHome/bin/mvn clean package"
+        
+    }
+    stage('3-code quality report'){
+        sh "$mavenHome/bin/mvn sonar:sonar"
+    }
+    stage('4-upload artifact'){
+        sh "$mavenHome/bin/mvn deploy"
+    }
+    stage('5-Tomcat deploy'){
+       deploy adapters: [tomcat9(credentialsId: 'TOMCAT', path: '', url: 'http://3.21.53.149:7000')], contextPath: null, war: 'target/*war' 
+    }
+    stage('6-Email Notification'){
+       emailext body: '''Hello Everyone Build from Ebay pipeline project''', recipientProviders: [developers()], subject: '', to: 'kingsleyobiedeh@gmail.com' 
+    }
+}

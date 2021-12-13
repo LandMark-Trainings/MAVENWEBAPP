@@ -1,7 +1,7 @@
 node{
     def mavenHome = tool name: 'maven 3.8.4'
     stage('1-clone'){
-       git branch: 'dev', credentialsId: 'GIT_PAT', url: 'https://github.com/LandMark-Trainings/MAVENWEBAPP.git' 
+       git branch: 'master', credentialsId: 'GIT_PAT', url: 'https://github.com/LandMark-Trainings/MAVENWEBAPP.git' 
     }
     stage('2-maven build'){
         sh "$mavenHome/bin/mvn clean package"

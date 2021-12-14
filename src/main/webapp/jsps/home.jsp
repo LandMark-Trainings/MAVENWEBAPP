@@ -20,7 +20,7 @@
 		<img src="images/log4.png" alt="" width="100">
 	</span>
 	<span style="font-weight: bold;">
-		Kingtech, 
+		Kingtechy, 
 		Toronto, Ontario, Canada
 		+1 437 215 2483,
 		mylandmarktech@gmail.com
